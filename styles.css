@@ -12,11 +12,16 @@ a {
   display: flex;
 }
 
+.width {
+  max-width: 76.875rem;
+  margin: auto;
+}
+
 header {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 0;
-  margin: 0;
+  margin: auto;
 }
 
 header nav {
@@ -24,20 +29,22 @@ header nav {
   align-items: center;
   font-weight: 700;
   font-size: small;
-  margin: 0 auto;
 }
 
 header nav a {
   padding-left: 40px;
 }
 
-header a {
-  display: inline-block;
-  box-sizing: border-box;
-}
-
 .no-white-bg {
   background-color: rgb(246, 239, 232);
+}
+
+.menu {
+  margin: 0;
+}
+
+.menu a:first-child {
+  padding-left: 0;
 }
 
 .btn-border {
@@ -61,21 +68,125 @@ header a {
   color: white;
 }
 
-.free:hover {
+.free:hover,
+.free2:hover {
   background-color: rgb(74, 21, 75);
+}
+
+.free2 {
+  background-color: rgb(109, 32, 110);
+  color: white;
+  font-weight: 700;
+  font-size: small;
+  margin-left: 0;
+  padding: 19px 40px 20px;
+  border: none;
+}
+
+.content {
+  justify-content: space-between;
+}
+
+.about {
+  flex-direction: column;
+  margin: 0;
+  width: 40%;
+  flex-shrink: 0;
+}
+
+.about h1 {
+  font-size: 4rem;
+  margin-top: 1.5rem;
+}
+
+.google {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  padding-left: 0;
+  padding-right: 1rem;
+  background-color: dodgerblue;
+  font-weight: 700;
+  font-size: small;
+  border: none;
+}
+
+.google div:first-child {
+  display: inline-block;
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 0.2rem;
+  margin-right: 0.5rem;
+}
+
+.google div {
+  align-self: flex-start;
+}
+.goole span {
+  justify-self: center;
+}
+
+.google span {
+  color: white;
+}
+
+.banner {
+  justify-content: space-between;
+  align-items: center;
+  gap: 3%;
+}
+
+.banner img {
+  width: 100%;
 }
 
 #logo {
   width: 100px;
 }
 
-.btn a:last-child {
+#campaign img {
+  width: 100%;
+  margin-left: 0;
+  max-height: 100%;
+  height: auto;
+}
+
+.header-btn a:last-child {
   display: none;
 }
 
 @media screen and (max-width: 1180px) {
   .sales {
     display: none;
+  }
+
+  .width {
+    padding: 4vw;
+  }
+  .buttons {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .google {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .google span {
+    justify-content: center;
+    padding-left: 4rem;
+    padding-right: 1rem;
+  }
+
+  .about {
+    flex-shrink: 0;
+  }
+
+  #campaign {
+    flex-shrink: 2;
   }
 }
 
@@ -95,8 +206,28 @@ header a {
     padding: 0;
   }
 
-  .btn a:last-child {
+  .header-btn a:last-child {
     display: block;
     padding-left: 40px;
+  }
+
+  .width {
+    padding: 4vw;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .google span {
+    justify-self: flex-start;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .about h1 {
+    font-size: 2rem;
   }
 }
