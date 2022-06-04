@@ -1,0 +1,102 @@
+body {
+  font-family: "Slack-Circular-Pro", "Helvetica Neue", Helvetica, "Segoe UI",
+    Tahoma Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.flex-container {
+  display: flex;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+header nav {
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: small;
+  margin: 0 auto;
+}
+
+header nav a {
+  padding-left: 40px;
+}
+
+header a {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.no-white-bg {
+  background-color: rgb(246, 239, 232);
+}
+
+.btn-border {
+  border: 1px solid rgb(74, 21, 75);
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  margin-left: 20px;
+}
+
+.sales {
+  color: rgb(74, 21, 75);
+  margin-left: 40px;
+}
+
+.sales:hover {
+  box-shadow: inset 0 0 0 2px rgb(97, 31, 105);
+}
+
+.free {
+  background-color: rgb(109, 32, 110);
+  color: white;
+}
+
+.free:hover {
+  background-color: rgb(74, 21, 75);
+}
+
+#logo {
+  width: 100px;
+}
+
+.btn a:last-child {
+  display: none;
+}
+
+@media screen and (max-width: 1180px) {
+  .sales {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sales,
+  .free,
+  #signin,
+  .menu a:not(:first-child) {
+    display: none;
+  }
+
+  header nav {
+    margin: 0 2rem;
+  }
+
+  header nav a {
+    padding: 0;
+  }
+
+  .btn a:last-child {
+    display: block;
+    padding-left: 40px;
+  }
+}
